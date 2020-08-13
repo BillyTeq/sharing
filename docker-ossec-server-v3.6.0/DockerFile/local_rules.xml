@@ -1,0 +1,25 @@
+<!-- Local rules -->
+
+<group name="suricata">
+  <rule id="199990" level="0">
+    <if_sid>3</if_sid>
+    <decoded_as>suricata</decoded_as>
+    <description>Suricata detected something bad</description>
+  </rule>
+  <rule id="199991" level="0">
+    <if_sid>199990</if_sid>
+    <match>ICMP</match>
+    <description>Ping attempt</description>
+  </rule>
+  <rule id="199992" level="10">
+    <if_sid>199990</if_sid>
+    <match>TELNET</match>
+    <description>Telnet attempt</description>
+  </rule>
+  <rule id="199993" level="10" frequency="10" timeframe="120">
+    <if_matched_sid>199992</if_matched_sid>
+    <same_id />
+    <description>Many telnet attempt from the same ip</description>
+  </rule>
+
+</group>

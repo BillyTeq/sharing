@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  ossec-server:
+    build: ./DockerFile/
+    container_name: ossec-server
+    network_mode : "host"
+#    ports:
+#     - 1514:1514
+#      - 1515:1515
+    volumes:
+      - /var/log/messages:/var/log/messages
+      - /var/ossec/etc/sslmanager.cert:/var/ossec/etc/sslmanager.cert
+      - /var/ossec/etc/sslmanager.key:/var/ossec/etc/sslmanager.key
+      - /var/ossec/etc/client.keys:/var/ossec/etc/client.keys
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    entrypoint: /tmp/docker-entrypoint.sh
