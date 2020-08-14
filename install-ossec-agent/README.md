@@ -2,7 +2,7 @@
 
 Le script `install-ossec-agent` permet de réaliser l'installation d'un agent ossec.
 	
-Installation des dépendances nécessaires. Ces dépendances sont :
+1. Installation des dépendances nécessaires. Ces dépendances sont :
 	- [gcc](https://gcc.gnu.org/)
 	- [pcre2](https://www.pcre.org/current/doc/html/pcre2.html)
 	- libpcre2-16.so.0(disponible dans le répertoire dependencies-rpm)
