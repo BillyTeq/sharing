@@ -1,0 +1,28 @@
+<decoder name="web-accesslog">
+    <type>web-log</type>
+    <prematch>^\S+ \S+ \S+ \.*[\S+ \S\d+] "\w+ \S+ HTTP\S+" </prematch>
+</decoder>
+
+<decoder name="web-accesslog-domain">
+    <type>web-log</type>
+    <parent>web-accesslog</parent>
+    <prematch>^\S+.\D+</prematch>
+    <regex>^\S+ (\S+) \S+ \.*[\S+ \S\d+] "(\w+) (\S+) HTTP\S+" (\d+) </regex>
+    <order>srcip, protocol, url, id</order>
+</decoder>
+
+<decoder name="web-accesslog-ip-ip">
+    <type>web-log</type>
+    <parent>web-accesslog</parent>
+    <prematch>^\S+ \S+.\S+ |^\S+ \S+:\S+ </prematch>
+    <regex>^(\S+) (\S+) \S+ \.*[\S+ \S\d+] "(\w+) (\S+) HTTP\S+" (\d+) </regex>
+    <order>srcip2, srcip, protocol, url, id</order>
+</decoder>
+
+<decoder name="web-accesslog-ip">
+    <type>web-log</type>
+    <parent>web-accesslog</parent>
+    <regex>^(\S+) \S+ \S+ \.*[\S+ \S\d+] "(\w+) (\S+) HTTP\S+" (\d+) </regex>
+    <order>srcip, protocol, url, id</order>
+</decoder>
+
