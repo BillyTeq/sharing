@@ -27,4 +27,10 @@ Lors du `setup` :
 
 Lors de la connexion `ssh` avec un conteneur, il est possible de se connecter avec le nom d'utilisateur qui est inscrit dans le nom du conteneur (`<name>-debian-<number>`).<br>
 Grâce à la clé publique ssh de la machine hôte prédisposé dans ce dernier, il n'y a pas besoin de rentrer de mot de passe. Par défaut, le mot de passe de l'utilisateur du conteneur (le même nom que l'utilisateur qui a utilisé le script') est `password`.<br>
-Il est possible d'utiliser la commande `sudo` sans mot de passe.
+
+# À savoir
+
+**Attention ces conteneurs sont absolument fait pour du test (absolument pas sécurisés).**<br>
+Il est possible d'utiliser la commande `sudo` sans mot de passe.<br>
+Les ports ouverts sont exposés à l'extérieur du conteneur et donc disponible depuis la machine hôte.<br> 
+
