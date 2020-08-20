@@ -18,7 +18,7 @@ L'action `--start` permet de démarrer tous les conteneurs qui ont été créé 
 
 Lors du `setup` :
   * Installation de du binaire `docker`
-  * Téléchargement du `Dockerfile` disponible [ici](#https://raw.githubusercontent.com/BillyTeq/sharing/master/Deployment_debian_docker/Dockerfile) 
+  * Téléchargement du `Dockerfile` disponible [ici](https://github.com/BillyTeq/sharing/blob/master/Deployment_debian_docker/Dockerfile) 
   * Construction de l'image `debian_docker_deployment` avec le `Dockerfile`
   * Suppression du `Dockerfile`
   * Création d'une clé ssh RSA de 4096 bits
