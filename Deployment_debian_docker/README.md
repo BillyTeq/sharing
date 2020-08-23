@@ -8,7 +8,7 @@ Le script `deployment_debian_docker.sh` permet de créer **facilement** et **rap
 
 Voici les options que propose ce script :
 
-L'action `--setup` permet d'installer les requis pour l'utilisation de ce script.
+L'action `--setup` permet d'installer les requis pour l'utilisation de ce script.<br>
 L'action `--create [number]` permet de créer un nombre donné de conteneur. Si le nombre n'est pas spécifié, seul un conteneur sera créé.<br>
 L'action `--drop` permet de supprimer tous les conteneurs (en marche ou non) qui ont été créé par ce script.<br>
 L'action `--infos` permet d'afficher le nom et l'IP de chaque conteneur.<br>
